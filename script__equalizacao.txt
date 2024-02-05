@@ -1,0 +1,152 @@
+--Gerando script de criação da Carga_CNH
+if not exists(select * from sys.objects where name = 'Carga_CNH')
+BEGIN
+CREATE TABLE [Carga_CNH] (
+    [CodigoIdentificadorPessoa] int NULL,
+    [NumeroRenach] varchar(11) NULL,
+    [NumeroFormularioCNH] bigint NULL,
+    [NumeroRegistro] varchar(11) NULL,
+    [MotivoRequerimentoCNH] varchar(4) NULL,
+    [DataPrimeiraHabilitacao] datetime NULL,
+    [UFPrimeiraHabilitacao] varchar(2) NULL,
+    [CategoriaCNH] varchar(4) NULL,
+    [DataEmissao] datetime NULL,
+    [DataValidadeCNH] datetime NULL,
+    [SituacaoCNH] varchar(1) NULL,
+    [UFHabilitacaoAtual] varchar(2) NULL,
+    [QuadroObservacoesCNH] varchar(20) NULL,
+    [idCategoria] int NULL,
+    [idPreSituacaoCNH] int NULL,
+    [idCargaCNH] int NOT NULL
+);
+END;
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'CodigoIdentificadorPessoa')
+BEGIN
+   ALTER TABLE Carga_CNH ADD CodigoIdentificadorPessoa int NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'NumeroRenach')
+BEGIN
+   ALTER TABLE Carga_CNH ADD NumeroRenach varchar(11) NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'NumeroFormularioCNH')
+BEGIN
+   ALTER TABLE Carga_CNH ADD NumeroFormularioCNH bigint NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'NumeroRegistro')
+BEGIN
+   ALTER TABLE Carga_CNH ADD NumeroRegistro varchar(11) NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'MotivoRequerimentoCNH')
+BEGIN
+   ALTER TABLE Carga_CNH ADD MotivoRequerimentoCNH varchar(4) NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'DataPrimeiraHabilitacao')
+BEGIN
+   ALTER TABLE Carga_CNH ADD DataPrimeiraHabilitacao datetime NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'UFPrimeiraHabilitacao')
+BEGIN
+   ALTER TABLE Carga_CNH ADD UFPrimeiraHabilitacao varchar(2) NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'CategoriaCNH')
+BEGIN
+   ALTER TABLE Carga_CNH ADD CategoriaCNH varchar(4) NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'DataEmissao')
+BEGIN
+   ALTER TABLE Carga_CNH ADD DataEmissao datetime NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'DataValidadeCNH')
+BEGIN
+   ALTER TABLE Carga_CNH ADD DataValidadeCNH datetime NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'SituacaoCNH')
+BEGIN
+   ALTER TABLE Carga_CNH ADD SituacaoCNH varchar(1) NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'UFHabilitacaoAtual')
+BEGIN
+   ALTER TABLE Carga_CNH ADD UFHabilitacaoAtual varchar(2) NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'QuadroObservacoesCNH')
+BEGIN
+   ALTER TABLE Carga_CNH ADD QuadroObservacoesCNH varchar(20) NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'idCategoria')
+BEGIN
+   ALTER TABLE Carga_CNH ADD idCategoria int NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'idPreSituacaoCNH')
+BEGIN
+   ALTER TABLE Carga_CNH ADD idPreSituacaoCNH int NULL
+END
+
+--SCRIPT DE ALTERAÇÃO DA TABELA Carga_CNH
+IF NOT EXISTS(select * from sys.columns
+                           where object_id = OBJECT_ID('Carga_CNH')
+                           and name = 'idCargaCNH')
+BEGIN
+   ALTER TABLE Carga_CNH ADD idCargaCNH int NOT NULL
+END
+
+
